@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\LTI Training\CRS-LTI-fullstack\CRS-G3-LTI-POS-DEVELOPMENT\.metadata\.plugins\org.eclipse.jdt.core
+4279379221.index
+3105154562.index
