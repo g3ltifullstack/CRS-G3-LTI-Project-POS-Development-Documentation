@@ -1,12 +1,12 @@
 package com.lt.business;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import com.lt.DAO.PayDaoImpl;
 import com.lt.DAO.PayDaoInterface;
 import com.lt.bean.Payment;
-import com.lt.bean.Student;
 
 public class PaymentImplService implements PaymentInterface {
 
@@ -40,9 +40,15 @@ public class PaymentImplService implements PaymentInterface {
 
 
 	@Override
-	public List<Payment> viewrecept(String  name) {
+	public void viewrecept(String  name) {
+		List <Payment> recept=new ArrayList();
 		PayDaoInterface paydao=new PayDaoImpl();
-		return paydao.viewrecept(name);
+		recept= paydao.viewrecept(name);
+		for (Payment payment : recept) {
+			System.out.println("payment id="+payment.getPaymentId()+"student name="+payment.getStudentname()+" amount="
+					+payment.getAmount()+" payment status"+payment.getPaymntstatus()+" payment mode ="+payment.getPaymntmode());
+			
+		}
 		
 	}
 	

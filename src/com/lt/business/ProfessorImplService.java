@@ -21,18 +21,20 @@ public  class ProfessorImplService implements ProfessorInterface {
 	
 	
 	
-	
 
+//calling dao method to display registred student
 	@Override
-	public List<Student> displayRegisteredStudent() {
-		List<Student> list=new ArrayList<Student>();
+	public void displayRegisteredStudent() {
+		List<Student> student=new ArrayList<Student>();
 		ProfessorDaoInterface professordao=new ProfessorDaoImpl();
-		list=professordao.displayRegistredStudent();
-		for (Student student : list) {
+		student=professordao.displayRegistredStudent();
+		for (Student students : student) {
 			
-		System.out.println(list);
+		System.out.println("student id-->"+students.getStudentId()+" student name-->"+students.getName()+" gender-->"+students.getGender()+
+				"semester-->"+students.getSemester()
+				+ " branch-->"+students.getBranch()+" phonenumber-->"+students.getPhoneNumber() );
 		}
-		return  list;
+		
 		
 	}
 

@@ -8,7 +8,7 @@ import com.lt.bean.Student;
 public interface ProfessorInterface {
 	
 
-	public List<Student> displayRegisteredStudent();
+	public void displayRegisteredStudent();
 	public void selectCourse(int courseId ,Professor professor);
 	public void displaySelectedCoursesProfessor(Professor professor);
 

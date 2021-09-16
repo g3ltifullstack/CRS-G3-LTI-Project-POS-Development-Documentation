@@ -30,7 +30,7 @@ public class Payment {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public String isPaymntstatus() {
+	public String getPaymntstatus() {
 		return paymntstatus;
 	}
 	public void setPaymntstatus(String paymntstatus) {

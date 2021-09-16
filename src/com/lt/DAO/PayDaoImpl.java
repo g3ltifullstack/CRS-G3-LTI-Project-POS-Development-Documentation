@@ -38,10 +38,7 @@ public class PayDaoImpl implements PayDaoInterface{
 				payment.setPaymntmode( rs.getInt("paymntmode"));
 				
 				payrecept.add( payment);
-			 
-			 
-			 System.out.println("data fetched");
-			
+
 			}
 			
 

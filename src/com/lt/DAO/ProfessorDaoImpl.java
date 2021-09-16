@@ -45,29 +45,33 @@ public class ProfessorDaoImpl implements ProfessorDaoInterface {
 	public List<Student> displayRegistredStudent() {
 		Connection connection = DBUtils.getConnection();
 		PreparedStatement stmt= null;
-		 List <Student> liststd=new ArrayList<Student>();
+		List <Student> liststd=new ArrayList<Student>();
+		 int countdata=0;
 		try {
+			
           
 			//Declaring prepared statement
 			stmt=connection.prepareStatement(CommonData.SELECT_STUDENT_PROF);
-		    //liststd.add(getInt(1, studentid));
+			
 			
 			ResultSet rs = stmt.executeQuery();
-			
-			if(rs.next()) {
+		
+			while(rs.next()) {
+				 
 				Student student =new Student();
-				student.setStudentId( rs.getInt("studentid"));
+			    student.setStudentId( rs.getInt("studentid"));
 				student.setName( rs.getString("studentname"));
 				student.setGender( rs.getString("gender"));
 				student.setSemester( rs.getInt("semester"));
 				student.setBranch( rs.getString("branch"));
 				student.setPhoneNumber( rs.getString("phonenumber"));
 				liststd.add(student);
-			 
-			 
-			 System.out.println("data fetched");
+			
 			
 			}
+			 System.out.println("data fetched");
+			
+			//return liststd;}
 			
 
 		} catch (SQLException ex) {

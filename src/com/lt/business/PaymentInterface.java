@@ -7,7 +7,7 @@ import com.lt.bean.Student;
 
 public interface PaymentInterface {
 	public boolean  payment(String student);
-	public List<Payment> viewrecept(String name);
+	public void viewrecept(String name);
 	
 
 }
