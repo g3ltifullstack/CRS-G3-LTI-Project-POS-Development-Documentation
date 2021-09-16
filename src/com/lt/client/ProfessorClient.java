@@ -24,7 +24,7 @@ public class ProfessorClient {
 		System.out.println("<-----Welcome to professor Portal ------> ");
 		System.out.println("Choose an Option to perform action ");
 		System.out.println("1. provideGrade ");
-		System.out.println("3. displaySelectedCoursesProfessor ");
+		System.out.println("2. Display Registated student ");
 		System.out.println("3. exit ");
 		Scanner sc = new Scanner(System.in);
 		int userRole = sc.nextInt();
@@ -50,9 +50,9 @@ public class ProfessorClient {
 			break;
 			
 		case 2:
-			System.out.println("displaySelectedCoursesProfessor");
+			System.out.println("Below showing registred student details");
 			// user sign up method
-			proff.displaySelectedCoursesProfessor(professor);
+			proff.displayRegisteredStudent();
 			
 			break;
 		

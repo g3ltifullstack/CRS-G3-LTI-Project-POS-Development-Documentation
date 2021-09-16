@@ -9,7 +9,7 @@ import com.lt.bean.User;
 
 public interface UserDaoInterface {
 
-	public User validateUser(int userid, String pass);
+	public User validateUser(String userid, String pass);
 	
 	 public Professor fetchProfessor(int professorId);
 	

@@ -9,20 +9,21 @@ import java.util.List;
 
 import com.lt.bean.Professor;
 import com.lt.bean.User;
+import com.lt.constants.CommonData;
 import com.lt.utils.DBUtils;
 
-public class UserDao  implements UserDaoInterface {
+public class UserDaoImpl  implements UserDaoInterface {
  
 	@Override
-	public User validateUser(int userid, String pass) {
+	public User validateUser(String userid, String pass) {
 		Connection connection = DBUtils.getConnection();
 		PreparedStatement stmt= null;
-		final String VALIDATE_USER="SELECT UserID, RollID FROM crsuser WHERE userid=? AND userpassword=?";
+		
 		try {
            
 			//Declaring prepared statement
-			stmt=connection.prepareStatement(VALIDATE_USER);
-			stmt.setInt(1, userid);
+			stmt=connection.prepareStatement(CommonData.VALIDATE_USER);
+			stmt.setString(1, userid);
 			stmt.setString(2,pass);
 			ResultSet rs = stmt.executeQuery();
 			
@@ -32,7 +33,7 @@ public class UserDao  implements UserDaoInterface {
 				System.out.println("resultset getting data");
 				User checkeduser = new User();
 				checkeduser.setUserId( rs.getInt("UserID") );
-				checkeduser.setRoleId(rs.getInt("RollID"));
+				checkeduser.setRoleId(rs.getInt("RoleID"));
 
 				return checkeduser;
 			}

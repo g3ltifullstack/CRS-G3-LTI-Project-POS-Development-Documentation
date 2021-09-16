@@ -1,8 +1,11 @@
 package com.lt.business;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import com.lt.DAO.ProfessorDao;
+
+import com.lt.DAO.ProfessorDaoImpl;
+import com.lt.DAO.ProfessorDaoInterface;
 import com.lt.DAO.StudentDAO;
 import com.lt.bean.Professor;
 import com.lt.bean.Student;
@@ -14,21 +17,22 @@ public  class ProfessorImplService implements ProfessorInterface {
 	StudentDAO stdao=new StudentDAO();
 	Professor prof =new Professor(); 
 	UserInterface user=new UserImplService();
-	ProfessorDao professordao=new ProfessorDao();
+	ProfessorDaoInterface professordao=new ProfessorDaoImpl();
 	
-	@Override
-	public void provideGrade(int studentid, Student student) {
-		// TODO Auto-generated method stub 
-		
-	}
-
+	
 	
 	
 
 	@Override
 	public List<Student> displayRegisteredStudent() {
-		System.out.println("list of student");
-		return stdao.studentDetails;
+		List<Student> list=new ArrayList<Student>();
+		ProfessorDaoInterface professordao=new ProfessorDaoImpl();
+		list=professordao.displayRegistredStudent();
+		for (Student student : list) {
+			
+		System.out.println(list);
+		}
+		return  list;
 		
 	}
 

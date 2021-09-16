@@ -11,7 +11,7 @@ public interface UserInterface {
 	public User manageUser(String username, String password);
 
 	public Student fetchStudent(int studentId);
-	public User validateUser(int userid,String password);
+	public User validateUser(String userid,String password);
 	
 	public Admin fetchAdmin(int adminId);
 

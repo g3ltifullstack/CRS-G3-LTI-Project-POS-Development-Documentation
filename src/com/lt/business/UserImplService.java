@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.lt.DAO.ProfessorDao;
+
+import com.lt.DAO.ProfessorDaoImpl;
 import com.lt.DAO.ProfessorDaoInterface;
 import com.lt.DAO.StudentDAO;
-import com.lt.DAO.UserDao;
+
+import com.lt.DAO.UserDaoImpl;
 import com.lt.DAO.UserDaoInterface;
 import com.lt.bean.Admin;
 import com.lt.bean.Professor;
@@ -19,7 +21,7 @@ import com.lt.client.ProfessorClient;
 public class UserImplService extends User implements UserInterface {
 	User user = new User();
 	Student student;
-	UserDaoInterface userdao1=new UserDao();
+	UserDaoInterface userdao1=new UserDaoImpl();
 
 	@Override
 	public User manageUser(String username, String password) {
@@ -44,7 +46,7 @@ public class UserImplService extends User implements UserInterface {
 		// TODO Auto-generated method stub
 		return null;
 	}
-UserDaoInterface userdao=new UserDao();
+UserDaoInterface userdao=new UserDaoImpl();
 	@Override
 	public Professor fetchProfessor(int professorId) {
 		return userdao1.fetchProfessor(professorId);
@@ -59,7 +61,7 @@ UserDaoInterface userdao=new UserDao();
 		studentDAO.signUpStudent(student);
 //		
 	}
-	ProfessorDaoInterface prfd= new ProfessorDao(); 
+	ProfessorDaoInterface prfd= new ProfessorDaoImpl(); 
 	@Override
 	public void displayProfessors() {
 		
@@ -136,7 +138,7 @@ UserDaoInterface userdao=new UserDao();
 		
 	}
 	@Override
-	public User validateUser(int userid, String password) {
+	public User validateUser(String userid, String password) {
 		User user= userdao1.validateUser(userid, password)	;
 		if(user==null)
 			System.out.println("user not available");;

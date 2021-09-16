@@ -5,7 +5,7 @@ public class Student extends User {
 	private int studentId;
 	private String name;
 	private String gender;
-	private int phoneNumber;
+	private String phoneNumber;
 	private int semester;
 	private String branch;
 
@@ -33,12 +33,12 @@ public class Student extends User {
 		this.gender = gender;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNumber(String string) {
+		this.phoneNumber = string;
 	}
 
 	public int getSemester() {
@@ -63,7 +63,7 @@ public class Student extends User {
 				+ phoneNumber + ", semester=" + semester + ", branch=" + branch + "]";
 	}
 
-	public Student(int studentId, String name, String gender, int phoneNumber, int semester, String branch) {
+	public Student(int studentId, String name, String gender, String phoneNumber, int semester, String branch) {
 		super();
 		this.studentId = studentId;
 		this.name = name;
@@ -72,5 +72,7 @@ public class Student extends User {
 		this.semester = semester;
 		this.branch = branch;
 	}
+	
+	public Student() {};
 
 }
