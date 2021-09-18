@@ -9,7 +9,9 @@ public interface ProfessorInterface {
 	
 
 	public void displayRegisteredStudent();
-	public void selectCourse(int courseId ,Professor professor);
+	public List<Professor> professorDetails(Professor professor);
+	public void studentByName();
+	
 	public void displaySelectedCoursesProfessor(Professor professor);
 
 

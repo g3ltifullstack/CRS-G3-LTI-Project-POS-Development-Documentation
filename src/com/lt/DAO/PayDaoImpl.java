@@ -7,13 +7,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.lt.bean.Payment;
 import com.lt.bean.Student;
+import com.lt.business.UserImplService;
 import com.lt.constants.CommonData;
 import com.lt.utils.DBUtils;
 
 public class PayDaoImpl implements PayDaoInterface{
-
+	private static Logger logger = Logger.getLogger(PayDaoImpl.class);
 	
 
 	@Override
@@ -22,7 +25,7 @@ public class PayDaoImpl implements PayDaoInterface{
 		PreparedStatement stmt= null;
 		 List <Payment> payrecept=new ArrayList<Payment>();
 		try {
-			//paymentid,amount,paymntstatus,studentname,paymntmode
+			//paymentid,amount,paymntstatus,s tudentname,paymntmode
 			//Declaring prepared statement
 			stmt=connection.prepareStatement(CommonData.PAYMENT_RECEPT);
 		    //liststd.add(getInt(1, studentid));
@@ -43,7 +46,7 @@ public class PayDaoImpl implements PayDaoInterface{
 			
 
 		} catch (SQLException ex) {
-			System.out.println(ex.getMessage());
+			logger.error(ex.getMessage());
 		}
 //		
 		
@@ -64,14 +67,14 @@ public class PayDaoImpl implements PayDaoInterface{
            
 			//Declaring prepared statement
 			stmt=connection.prepareStatement(CommonData.PAYMNT_UPDATE);
-			stmt.setInt(1,payment.getPaymentId());
-			stmt.setInt(2,payment.getAmount());
-			stmt.setString(3, "done");
-			stmt.setInt(4,payment.getPaymntmode());
-			stmt.setString(5,payment.getCardnumber());
-			stmt.setInt(6,payment.getPaymntpin());
-			stmt.setString(7,payment.getPaymntremark());
-			stmt.setString(8,student);
+			
+			stmt.setInt(1,payment.getAmount());
+			stmt.setString(2, "done");
+			stmt.setInt(3,payment.getPaymntmode());
+			stmt.setString(4,payment.getCardnumber());
+			stmt.setInt(5,payment.getPaymntpin());
+			stmt.setString(6,payment.getPaymntremark());
+			stmt.setString(7,student);
 		  
 			ResultSet rs = stmt.executeQuery();
 			if(rs.next()) {
@@ -84,7 +87,7 @@ public class PayDaoImpl implements PayDaoInterface{
 			
 
 		} catch (SQLException ex) {
-			System.out.println(ex.getMessage());
+			logger.error(ex.getMessage());
 		}
 //		
 		

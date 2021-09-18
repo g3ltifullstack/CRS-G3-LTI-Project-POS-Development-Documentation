@@ -12,7 +12,7 @@ import com.lt.business.UserInterface;
 
 public class UserClient {
 	
-public static void main(String[] args) {
+public static void main(String[] args)  {
 		
 		UserInterface userOperation= new UserImplService();
 		Scanner sc=new Scanner(System.in);
@@ -84,26 +84,14 @@ public static void main(String[] args) {
 						Professor professor= userOperation.fetchProfessor(userId);
 						ProfessorClient professorClient= new ProfessorClient();
 						//redirecting to professor client landing page
-						professorClient.professorOperation(professor);
+						
+							professorClient.professorOperation(professor);
+					
 						continue;
 					}
 			
 					break;
-
-				case 3:
-					System.out.println("Manage User Portal");
-					System.out.println("Enter UserName: ");
-					String userName = sc.next();
-					System.out.println("Enter Password: ");
-					String password1 = sc.next();
-					// Manage User method
-					//proff.manageUser(userName, password);
-					System.out.println("Username and Password submitted Successfully");
-					break;
-
-				case 4:
-					System.out.println("You have successfully logged out and exited from system. thank you!");
-					break;
+                 
 
 				default:
 					System.out.println("Choose valid user type client");

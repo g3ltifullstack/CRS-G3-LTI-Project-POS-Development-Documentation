@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
 
 import com.lt.DAO.ProfessorDaoImpl;
 import com.lt.DAO.ProfessorDaoInterface;
@@ -19,13 +20,14 @@ import com.lt.client.ProfessorClient;
 
 
 public class UserImplService extends User implements UserInterface {
+	private static Logger logger = Logger.getLogger(UserImplService.class);
 	User user = new User();
 	Student student;
 	UserDaoInterface userdao1=new UserDaoImpl();
 
 	@Override
 	public User manageUser(String username, String password) {
-		System.out.println("Manage User--->>");
+		logger.debug("Manage User--->>");
 		if (username != null && password != null) {
 			System.out.println("Set Username:->");
 			user.setUserName(username);
@@ -74,7 +76,7 @@ UserDaoInterface userdao=new UserDaoImpl();
 				professor.setUserName("Mr "+ professor.getProfessorName() );
 		});
 
-		System.out.println("PROFESSOR ID      NAME            PHONE NUMBER      DESIGNATION   ");
+		logger.info("PROFESSOR ID      NAME            PHONE NUMBER      DESIGNATION   ");
 		for(Professor professor: professors) {
 			System.out.println(professor.getProfessorId()+"         "+professor.getProfessorName()+"          "+professor.getGender()+"        "+professor.getDepartment()+" "+professor.getEmail());
 
@@ -92,29 +94,7 @@ UserDaoInterface userdao=new UserDaoImpl();
 
 	@Override
 	public void signUp() {
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Enter userID");
-		int userId = sc.nextInt();
-
-		System.out.println("Enter userName");
-		String userName = sc.next();
-
-		System.out.println("Enter password");
-		String password = sc.next();
-		System.out.println("Reached-->>");
-		if (userId != 0 && userName != null && password != null) {
-			System.out.println("Got it");
-			user.setUserId(userId);
-			user.setUserName(userName);
-			user.setUserPassword(password);
-			System.out.println("end reached");
-
-		}
-		System.out.println("limit");
-		sc.close();
-
-	}
+			}
 
 	
 	Professor professor=new Professor();
@@ -141,7 +121,7 @@ UserDaoInterface userdao=new UserDaoImpl();
 	public User validateUser(String userid, String password) {
 		User user= userdao1.validateUser(userid, password)	;
 		if(user==null)
-			System.out.println("user not available");;
+			logger.debug("user not available");;
 		return user;
 
 	}

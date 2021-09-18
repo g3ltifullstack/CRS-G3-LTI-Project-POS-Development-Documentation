@@ -18,14 +18,15 @@ public class ProfessorClient {
 	
 	
 		CourseInterface courseOperation= new CourseImplService();
-	public void professorOperation(Professor professor) {
+	public void professorOperation(Professor professor)  {
 		
 		ProfessorInterface proff = new ProfessorImplService();
 		System.out.println("<-----Welcome to professor Portal ------> ");
 		System.out.println("Choose an Option to perform action ");
 		System.out.println("1. provideGrade ");
 		System.out.println("2. Display Registated student ");
-		System.out.println("3. exit ");
+		System.out.println("3. Display Student by name  ");
+		System.out.println("4. exit ");
 		Scanner sc = new Scanner(System.in);
 		int userRole = sc.nextInt();
 		int courseId;
@@ -53,6 +54,12 @@ public class ProfessorClient {
 			System.out.println("Below showing registred student details");
 			// user sign up method
 			proff.displayRegisteredStudent();
+			
+			break;
+		case 3:
+			System.out.println("selected student");
+			// user sign up method
+			proff.studentByName();
 			
 			break;
 		

@@ -6,14 +6,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 
 import com.lt.bean.Professor;
 import com.lt.bean.User;
 import com.lt.constants.CommonData;
+import com.lt.exception.UserNotFoundException;
 import com.lt.utils.DBUtils;
 
 public class UserDaoImpl  implements UserDaoInterface {
  
+	private static Logger logger = Logger.getLogger(UserDaoImpl.class);
 	@Override
 	public User validateUser(String userid, String pass) {
 		Connection connection = DBUtils.getConnection();
@@ -27,8 +30,8 @@ public class UserDaoImpl  implements UserDaoInterface {
 			stmt.setString(2,pass);
 			ResultSet rs = stmt.executeQuery();
 			
-
-			if(rs.next() )
+            try {
+			if(rs.next() ) 
 			{
 				System.out.println("resultset getting data");
 				User checkeduser = new User();
@@ -37,6 +40,14 @@ public class UserDaoImpl  implements UserDaoInterface {
 
 				return checkeduser;
 			}
+			else {
+				 throw new  UserNotFoundException("user not found for -->"+userid);
+			}
+            }
+			catch(UserNotFoundException ex) {
+				logger.error(ex.getMessage());
+			}
+			
 
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());

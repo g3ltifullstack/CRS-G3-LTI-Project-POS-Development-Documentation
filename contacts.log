@@ -1,0 +1,98 @@
+15:03:38,485  INFO ProfessorImplService,main:35 - student id-->101 student name-->akhilesh gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:03:38,492  INFO ProfessorImplService,main:35 - student id-->102 student name-->Srinivas gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:03:38,492  INFO ProfessorImplService,main:35 - student id-->103 student name-->Akshya gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:03:38,493  INFO ProfessorImplService,main:35 - student id-->104 student name-->Amit gender-->malesemester-->2 branch-->Java phonenumber-->8269117403
+15:31:51,900 DEBUG ProfessorImplService,main:70 - enter name of student
+15:37:45,659 DEBUG ProfessorImplService,main:70 - enter name of student
+15:42:51,883 DEBUG ProfessorImplService,main:71 - enter name of student
+15:44:07,074 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of 3
+15:44:43,786 DEBUG ProfessorImplService,main:71 - enter name of student
+15:44:48,042 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of amit
+15:45:40,243 DEBUG ProfessorImplService,main:71 - enter name of student
+15:45:42,906 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of amit
+15:45:42,912 DEBUG ProfessorImplService,main:76 - data getting of  amit
+15:47:58,840  INFO ProfessorImplService,main:35 - below showing registred student details
+15:47:58,845  INFO ProfessorImplService,main:38 - student id-->101 student name-->akhilesh gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:47:58,846  INFO ProfessorImplService,main:38 - student id-->102 student name-->Srinivas gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:47:58,847  INFO ProfessorImplService,main:38 - student id-->103 student name-->Akshya gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+15:47:58,848  INFO ProfessorImplService,main:38 - student id-->104 student name-->Amit gender-->malesemester-->2 branch-->Java phonenumber-->8269117403
+15:59:21,897 DEBUG ProfessorImplService,main:71 - enter name of student
+15:59:26,864 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+15:59:26,871 DEBUG ProfessorImplService,main:76 - data getting of  akhilesh
+15:59:26,871  INFO ProfessorImplService,main:80 - student id-->101 student name-->akhilesh gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+16:00:01,144 DEBUG ProfessorImplService,main:71 - enter name of student
+16:00:05,864 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of abc
+16:00:05,866 DEBUG ProfessorImplService,main:76 - data getting of  abc
+16:03:08,449 DEBUG ProfessorImplService,main:71 - enter name of student
+16:03:12,480 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of hdv
+16:03:12,487 DEBUG ProfessorImplService,main:76 - data getting of  hdv
+14:01:34,704 DEBUG ProfessorImplService,main:72 - enter name of student
+14:01:38,706 DEBUG ProfessorImplService,main:75 - calling studentByName for getting data of 106
+14:01:38,713 DEBUG ProfessorImplService,main:82 - data getting of  106
+14:08:23,384 DEBUG ProfessorImplService,main:73 - enter name of student
+14:08:26,295 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of 1005
+14:08:26,344 DEBUG ProfessorImplService,main:86 - data getting of  1005
+15:27:22,333 DEBUG ProfessorImplService,main:71 - enter name of student
+15:27:25,124 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of 102
+15:27:25,280 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of 102
+15:28:35,107 DEBUG ProfessorImplService,main:71 - enter name of student
+15:28:40,203 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of 101
+15:28:40,209 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of 101
+15:29:17,652 DEBUG ProfessorImplService,main:71 - enter name of student
+15:29:24,707 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+15:29:24,711 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+15:29:24,712  INFO ProfessorImplService,main:80 - student id-->101 student name-->akhilesh gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+16:52:52,728 DEBUG ProfessorImplService,main:71 - enter name of student
+16:52:56,869 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of amit
+16:52:56,892 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of amit
+16:54:52,350 DEBUG ProfessorImplService,main:71 - enter name of student
+16:54:57,189 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+16:54:57,197 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+17:03:34,733 ERROR UserDaoImpl,main:48 - com.lt.exception.UserNotFoundException
+17:03:34,735 DEBUG UserImplService,main:124 - user not available
+17:04:55,507 ERROR UserDaoImpl,main:48 - 
+17:04:55,512 DEBUG UserImplService,main:124 - user not available
+17:05:47,427 ERROR UserDaoImpl,main:48 - 
+17:05:47,434 DEBUG UserImplService,main:124 - user not available
+17:06:51,625 ERROR UserDaoImpl,main:48 - user not found for -->gdfg
+17:06:51,627 DEBUG UserImplService,main:124 - user not available
+17:13:36,754 DEBUG ProfessorImplService,main:71 - enter name of student
+17:13:41,913 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+17:13:41,921 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+17:16:45,723 DEBUG ProfessorImplService,main:71 - enter name of student
+17:17:00,089 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of Amit
+17:17:00,095 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of Amit
+17:18:40,331 DEBUG ProfessorImplService,main:71 - enter name of student
+17:18:43,466 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of Amit
+17:18:43,474 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of Amit
+17:20:03,092 DEBUG ProfessorImplService,main:71 - enter name of student
+17:20:08,451 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of Amit
+17:20:08,456 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of Amit
+17:20:52,739 DEBUG ProfessorImplService,main:71 - enter name of student
+17:20:55,642 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of Amit
+17:20:55,649 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of Amit
+17:22:02,593  INFO ProfessorImplService,main:35 - below showing registred student details
+17:22:02,600  INFO ProfessorImplService,main:38 - student id-->101 student name-->akhilesh gender-->malesemester-->2 branch-->CSE phonenumber-->8269117483
+17:22:30,772 DEBUG ProfessorImplService,main:71 - enter name of student
+17:22:38,125 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+17:22:38,134 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+17:26:49,734 DEBUG ProfessorImplService,main:71 - enter name of student
+17:27:00,165 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+17:30:52,560 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+17:32:10,773 DEBUG ProfessorImplService,main:71 - enter name of student
+17:32:18,534 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of akhilesh
+17:32:29,337 DEBUG ProfessorImplService,main:76 - calling studentByName for getting data of akhilesh
+17:33:53,524 DEBUG ProfessorImplService,main:71 - enter name of student
+17:33:59,125 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of Amit
+17:33:59,135  INFO ProfessorImplService,main:78 - student id-->104 student name-->Amit gender-->malesemester-->2 branch-->Java phonenumber-->8269117403
+17:34:33,214 DEBUG ProfessorImplService,main:71 - enter name of student
+17:34:36,301 DEBUG ProfessorImplService,main:74 - calling studentByName for getting data of jhdgdg
+17:34:36,311 ERROR ProfessorDaoImpl,main:110 - given student details not available==jhdgdg
+17:55:02,353 ERROR GreadImplDao,main:57 - ORA-00001: unique constraint (DEVU.SYS_C007422) violated
+
+18:11:30,068 ERROR UserDaoImpl,main:48 - user not found for -->akhiesh
+18:11:30,071 DEBUG UserImplService,main:124 - user not available
+18:17:48,760 ERROR GreadImplDao,main:57 - ORA-02291: integrity constraint (DEVU.SYS_C007448) violated - parent key not found
+
+18:26:43,418 ERROR GreadImplDao,main:58 - such student not exist  not existjava.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (DEVU.SYS_C007448) violated - parent key not found
+

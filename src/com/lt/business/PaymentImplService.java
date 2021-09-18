@@ -4,36 +4,44 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.lt.DAO.PayDaoImpl;
 import com.lt.DAO.PayDaoInterface;
 import com.lt.bean.Payment;
 
 public class PaymentImplService implements PaymentInterface {
 
-	
+	private static Logger logger = Logger.getLogger(PaymentImplService.class);
 	
 	Scanner sc=new Scanner(System.in);
+	//iniitiate payment when student provide name by student class rest details taken fro here
 	@Override
 	public boolean payment(String name) {
 		Payment paymnt=new Payment();
-		System.out.println("inter paymnt details");
-		
-		System.out.println(" enter paymntId");
-		int paymentId=sc.nextInt();
-		System.out.println(" enter amount--> enter only numeric value");
+		logger.debug("inter paymnt details");
+	    logger.debug(" enter amount--> enter only numeric value");
 		int amount=sc.nextInt();
-		System.out.println(" paymnt mode -->101 for debit card ---> 102 for credit card");
+		logger.debug(" paymnt mode -->101 for debit card ---> 102 for credit card");
 		int paymntmode=sc.nextInt();
-		System.out.println("enter card number -->card number should be 16 degit");
+		logger.debug("enter card number -->card number should be 16 degit");
 		String cardnumber=sc.next();
-		System.out.println("enter card pin ");
+		logger.debug("enter card pin ");
 		int paymntpin=sc.nextInt();
-		System.out.println("enter paymnt remark");
+		logger.debug("enter paymnt remark");
 		String paymntremark=sc.next();
 		
-		PayDaoInterface paydao=new PayDaoImpl();
-		paydao.payBill(name,paymnt);
+		logger.debug("setting valuse in object");
+		paymnt.setAmount(amount);
+		paymnt.setPaymntmode(paymntmode);
+		paymnt.setCardnumber(cardnumber);
+		paymnt.setPaymntpin(paymntpin);
+		paymnt.setPaymntremark(paymntremark);
 		
+		PayDaoInterface paydao=new PayDaoImpl();
+		logger.debug("going to payment");
+		paydao.payBill(name,paymnt);
+		logger.debug("going to payment");
 	
 		return false;
 	}
@@ -45,7 +53,7 @@ public class PaymentImplService implements PaymentInterface {
 		PayDaoInterface paydao=new PayDaoImpl();
 		recept= paydao.viewrecept(name);
 		for (Payment payment : recept) {
-			System.out.println("payment id="+payment.getPaymentId()+"student name="+payment.getStudentname()+" amount="
+			logger.info("payment id="+payment.getPaymentId()+"student name="+payment.getStudentname()+" amount="
 					+payment.getAmount()+" payment status"+payment.getPaymntstatus()+" payment mode ="+payment.getPaymntmode());
 			
 		}
