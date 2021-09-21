@@ -12,3 +12,4 @@ public class CommonData {
     public final static String SELECT_STUDENT_BY_NAME="select studentid,studentname,gender,semester,branch,phonenumber from student where studentname=?";
 }
  
+//CREATE SEQUENCE user_seq START WITH 1  INCREMENT by 1    MINVALUE  1    MAXVALUE 1000;
